@@ -4,31 +4,34 @@ import './index.scss';
 import Data from './data.json';
 
 function Output(props) {
-  let imgSrc = 'https://img.shields.io/badge/';
+  let htmlSrc = 'https://img.shields.io/badge/';
+  let mdSrc = 'https://img.shields.io/badge/';
   let logo = props.status.toString().toLowerCase();
+  let name = props.status.replace(/ /g, "&nbsp;");
 
   logo = logo.replace(/ /g, "-");
   logo = logo.replace('++', "%2b%2b");
 
-  imgSrc += props.status + '-' + props.color + '.svg?logo=' + logo + '&style=' + props.style;
+  htmlSrc += props.status + '-' + props.color + '.svg?logo=' + logo + '&style=' + props.style;
+  mdSrc += name + '-' + props.color + '.svg?logo=' + logo + '&style=' + props.style;
 
   return (
     <Row className="output-area">
       <figure className="badge">
-        <img src={imgSrc} alt={props.status} />
+        <img src={htmlSrc} alt={props.status} />
       </figure>
 
       <div className="src-title">
         <p>HTML</p>
       </div>
       <pre className="src-space">
-        <code>&lt;img src="{imgSrc}" /&gt;</code>
+        <code>&lt;img src="{htmlSrc}" /&gt;</code>
       </pre>
       <div className="src-title">
         <p>Markdown</p>
       </div>
       <pre className="src-space">
-        <code>![{props.status}]({imgSrc})</code>
+        <code>![{props.status}]({mdSrc})</code>
       </pre>
     </Row>
   );
