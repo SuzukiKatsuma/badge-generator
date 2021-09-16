@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/badge-generator/static/css/main.53342841.chunk.css",
-    "main.js": "/badge-generator/static/js/main.381e5780.chunk.js",
-    "main.js.map": "/badge-generator/static/js/main.381e5780.chunk.js.map",
+    "main.js": "/badge-generator/static/js/main.38bce713.chunk.js",
+    "main.js.map": "/badge-generator/static/js/main.38bce713.chunk.js.map",
     "runtime-main.js": "/badge-generator/static/js/runtime-main.4b6e3bbb.js",
     "runtime-main.js.map": "/badge-generator/static/js/runtime-main.4b6e3bbb.js.map",
-    "static/js/2.b15ca7b6.chunk.js": "/badge-generator/static/js/2.b15ca7b6.chunk.js",
-    "static/js/2.b15ca7b6.chunk.js.map": "/badge-generator/static/js/2.b15ca7b6.chunk.js.map",
+    "static/js/2.1c939d39.chunk.js": "/badge-generator/static/js/2.1c939d39.chunk.js",
+    "static/js/2.1c939d39.chunk.js.map": "/badge-generator/static/js/2.1c939d39.chunk.js.map",
     "static/js/3.580f2e04.chunk.js": "/badge-generator/static/js/3.580f2e04.chunk.js",
     "static/js/3.580f2e04.chunk.js.map": "/badge-generator/static/js/3.580f2e04.chunk.js.map",
     "index.html": "/badge-generator/index.html",
     "static/css/main.53342841.chunk.css.map": "/badge-generator/static/css/main.53342841.chunk.css.map",
-    "static/js/2.b15ca7b6.chunk.js.LICENSE.txt": "/badge-generator/static/js/2.b15ca7b6.chunk.js.LICENSE.txt"
+    "static/js/2.1c939d39.chunk.js.LICENSE.txt": "/badge-generator/static/js/2.1c939d39.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4b6e3bbb.js",
-    "static/js/2.b15ca7b6.chunk.js",
+    "static/js/2.1c939d39.chunk.js",
     "static/css/main.53342841.chunk.css",
-    "static/js/main.381e5780.chunk.js"
+    "static/js/main.38bce713.chunk.js"
   ]
 }
