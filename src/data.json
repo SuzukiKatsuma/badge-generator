@@ -870,6 +870,11 @@
     "category": "ProgrammingLanguages"
   },
   {
+    "name": "Qiita",
+    "color": "f6f6f4",
+    "category": "Social"
+  },
+  {
     "name": "Qt",
     "color": "fff",
     "category": "Framework"
@@ -1253,6 +1258,11 @@
     "name": "Zend Framework",
     "color": "0f1419",
     "category": "Framework"
+  },
+  {
+    "name": "Zenn",
+    "color": "fff",
+    "category": "Social"
   },
   {
     "name": "Zoom",
