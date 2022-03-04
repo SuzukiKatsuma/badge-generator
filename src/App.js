@@ -12,8 +12,8 @@ function Output(props) {
   logo = logo.replace(/ /g, "-");
   logo = logo.replace('++', "%2b%2b");
 
-  htmlSrc += props.status + '-' + props.color + '.svg?logo=' + logo + '&style=' + props.style;
-  mdSrc += name + '-' + props.color + '.svg?logo=' + logo + '&style=' + props.style;
+  htmlSrc += `${props.status}-${props.color}.svg?logo=${logo}&style=${props.style}`;
+  mdSrc += `${name}-${props.color}.svg?logo=${logo}&style=${props.style}`;
 
   return (
     <Row className="output-area">
