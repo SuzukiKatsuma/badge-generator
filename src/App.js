@@ -3,22 +3,22 @@ import { Button, Col, Form, Modal, Row } from 'react-bootstrap';
 import './index.scss';
 import Data from './data.json';
 
-function Output(props) {
+function Output({ status, color, style }) {
   let htmlSrc = 'https://img.shields.io/badge/';
   let mdSrc = 'https://img.shields.io/badge/';
-  let logo = props.status.toString().toLowerCase();
-  let name = props.status.replace(/ /g, "&nbsp;");
+  let logo = status.toString().toLowerCase();
+  let name = status.replace(/ /g, "&nbsp;");
 
   logo = logo.replace(/ /g, "-");
   logo = logo.replace('++', "%2b%2b");
 
-  htmlSrc += `${props.status}-${props.color}.svg?logo=${logo}&style=${props.style}`;
-  mdSrc += `${name}-${props.color}.svg?logo=${logo}&style=${props.style}`;
+  htmlSrc += `${status}-${color}.svg?logo=${logo}&style=${style}`;
+  mdSrc += `${name}-${color}.svg?logo=${logo}&style=${style}`;
 
   return (
     <Row className="output-area">
       <figure className="badge">
-        <img src={htmlSrc} alt={props.status} />
+        <img src={htmlSrc} alt={status} />
       </figure>
 
       <div className="src-title">
@@ -31,7 +31,7 @@ function Output(props) {
         <p>Markdown</p>
       </div>
       <pre className="src-space">
-        <code>![{props.status}]({mdSrc})</code>
+        <code>![{status}]({mdSrc})</code>
       </pre>
     </Row>
   );
