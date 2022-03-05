@@ -43,9 +43,9 @@ export default class Generator extends React.Component {
 
   render() {
     const lists = Data.map((d) =>
-      <Button className="col-sm-3 m-1" variant="outline-primary" key={d.id} name={d.name} data-color={d.color} onClick={this.handleClick}>
+      <button className="list-item" key={d.id} name={d.name} data-color={d.color} onClick={this.handleClick}>
         <p className="align-center m-0">{d.name}</p>
-      </Button>
+      </button>
     );
 
     return (
@@ -57,7 +57,9 @@ export default class Generator extends React.Component {
               <Form.Control readOnly id="logo" name="logo" placeholder={this.state.status} />
             </Col>
             <Col sm="2">
-              <Button key="modal" variant="outline-secondary" onClick={this.handleToggle}>Select</Button>
+              <Button key="modal" variant="outline-secondary" onClick={this.handleToggle}>
+                Select
+              </Button>
             </Col>
           </Form.Group>
           <Form.Group as={Row} className="form-row">
@@ -83,16 +85,9 @@ export default class Generator extends React.Component {
             <Modal.Header closeButton>
               <Modal.Title>Select</Modal.Title>
             </Modal.Header>
-            <Modal.Body>
-              <Row className="justify-content-around">
-                {lists}
-              </Row>
+            <Modal.Body className="list-item-body">
+              {lists}
             </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleToggle}>
-                Close
-              </Button>
-            </Modal.Footer>
           </Modal>
         </>
 

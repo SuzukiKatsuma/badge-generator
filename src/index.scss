@@ -4,6 +4,17 @@ body {
   background-color: #f3f3f2;
 }
 
+button {
+  background: #737f99;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+
+  &:hover, &:focus {
+    background-color: #99a9cc;
+  }
+}
+
 /********************/
 /*      Header      */
 /********************/
@@ -39,6 +50,19 @@ label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+/********************/
+/*       Modal      */
+/********************/
+.list-item-body {
+  display: grid;
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.list-item {
+  margin: 8px;
 }
 
 /********************/
