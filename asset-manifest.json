@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/badge-generator/static/css/main.03bdbe31.css",
-    "main.js": "/badge-generator/static/js/main.fb61ac31.js",
+    "main.css": "/badge-generator/static/css/main.3ec3a2f3.css",
+    "main.js": "/badge-generator/static/js/main.847d4e2c.js",
     "static/js/787.4335e1fb.chunk.js": "/badge-generator/static/js/787.4335e1fb.chunk.js",
     "index.html": "/badge-generator/index.html",
-    "main.03bdbe31.css.map": "/badge-generator/static/css/main.03bdbe31.css.map",
-    "main.fb61ac31.js.map": "/badge-generator/static/js/main.fb61ac31.js.map",
+    "main.3ec3a2f3.css.map": "/badge-generator/static/css/main.3ec3a2f3.css.map",
+    "main.847d4e2c.js.map": "/badge-generator/static/js/main.847d4e2c.js.map",
     "787.4335e1fb.chunk.js.map": "/badge-generator/static/js/787.4335e1fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03bdbe31.css",
-    "static/js/main.fb61ac31.js"
+    "static/css/main.3ec3a2f3.css",
+    "static/js/main.847d4e2c.js"
   ]
 }
