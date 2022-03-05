@@ -1,15 +1,35 @@
-@import "~bootstrap/scss/bootstrap";
+@use "~bootstrap/scss/bootstrap";
 
 body {
   background-color: #f3f3f2;
 }
 
+/********************/
+/*      Header      */
+/********************/
 header {
   background-color: #393f4c;
+
   h1 {
     color: #fff;
     padding: 16px;
     text-align: center;
+  }
+}
+
+/********************/
+/*      Choice      */
+/********************/
+.form-row {
+  margin: 20px auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  width: 50%;
+
+  input {
+    margin: 0 auto;
   }
 }
 
@@ -21,27 +41,9 @@ label {
   -ms-user-select: none;
 }
 
-footer{
-  margin-top: 16px;
-  p {
-    font-size: 12px;
-    margin-bottom: 6px;
-    text-align: center;
-  }
-}
-
-.form-row {
-  margin: 20px auto;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  width: 50%;
-  input {
-    margin: 0 auto;
-  }
-}
-
+/********************/
+/*      Outputs     */
+/********************/
 .output-area {
   background-color: #fff;
   padding: 20px;
@@ -51,19 +53,21 @@ footer{
   margin: 0;
   padding: 0;
   text-align: center;
+
   img {
-  height: 50px;
+    height: 50px;
   }
 }
 
 .src-title {
-  margin: 0 auto;
   font-weight: bold;
+  margin: 0 auto;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   width: 85%;
+
   p {
     margin: 0;
     margin-top: 16px;
@@ -76,13 +80,28 @@ footer{
   margin: 0 auto;
   overflow: scroll;
   -ms-overflow-style: none;
-  scrollbar-width: none; 
   padding: 30px 10px;
+  scrollbar-width: none; 
   width: 80%;
+
   &::-webkit-scrollbar {
     display: none;
   }
+
   code {
     font: 12px source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+  }
+}
+
+/********************/
+/*      Footer      */
+/********************/
+footer{
+  margin-top: 16px;
+
+  p {
+    font-size: 12px;
+    margin-bottom: 6px;
+    text-align: center;
   }
 }
