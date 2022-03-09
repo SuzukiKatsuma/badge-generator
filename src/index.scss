@@ -74,9 +74,9 @@ label {
 }
 
 .badge {
-  margin: 0;
+  display: block;
+  margin: 0 auto;
   padding: 0;
-  text-align: center;
 
   img {
     height: 50px;

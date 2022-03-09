@@ -49,7 +49,7 @@ export default class Generator extends React.Component {
     );
 
     return (
-      <main className="container-fluid">
+      <main>
         <Form className="my-5">
           <Form.Group as={Row} className="form-row">
             <Form.Label column sm="2">Icon</Form.Label>

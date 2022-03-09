@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Row } from "react-bootstrap";
-
 const Outputs = ({ status, color, style }) => {
   let htmlSrc = 'https://img.shields.io/badge/';
   let mdSrc = 'https://img.shields.io/badge/';
@@ -15,7 +13,7 @@ const Outputs = ({ status, color, style }) => {
   mdSrc += `${name}-${color}.svg?logo=${logo}&style=${style}`;
 
   return (
-    <Row className="output-area">
+    <div className="output-area">
       <figure className="badge">
         <img src={htmlSrc} alt={status} />
       </figure>
@@ -32,7 +30,7 @@ const Outputs = ({ status, color, style }) => {
       <pre className="src-space">
         <code>![{status}]({mdSrc})</code>
       </pre>
-    </Row>
+    </div>
   );
 }
 
