@@ -31,6 +31,10 @@ header {
 /********************/
 /*      Choice      */
 /********************/
+.form-wrapper {
+  margin: 64px 0;
+}
+
 .form-row {
   margin: 20px auto;
   user-select: none;
@@ -39,9 +43,23 @@ header {
   -ms-user-select: none;
   width: 50%;
 
+  label {
+    margin: 0 auto;
+  }
+
   input {
     margin: 0 auto;
   }
+}
+
+.icon-form {
+  display: grid;
+  grid-template-columns: 72px 3fr 1fr;
+}
+
+.design-form {
+  display: grid;
+  grid-template-columns: 72px 2fr 1fr 1fr;
 }
 
 label {

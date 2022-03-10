@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Form, Modal, Row } from 'react-bootstrap';
+import { Button, Form, Modal } from 'react-bootstrap';
 import './index.scss';
 import Data from './data.json';
 import Outputs from './components/Outputs';
@@ -50,33 +50,25 @@ export default class Generator extends React.Component {
 
     return (
       <main>
-        <Form className="my-5">
-          <Form.Group as={Row} className="form-row">
+        <Form className="form-wrapper">
+          <Form.Group className="form-row icon-form">
             <Form.Label column sm="2">Icon</Form.Label>
-            <Col sm="8">
-              <Form.Control readOnly id="logo" name="logo" placeholder={this.state.status} />
-            </Col>
-            <Col sm="2">
-              <Button key="modal" variant="outline-secondary" onClick={this.handleToggle}>
-                Select
-              </Button>
-            </Col>
+            <Form.Control readOnly id="logo" name="logo" placeholder={this.state.status} />
+            <Button key="modal" variant="outline-secondary" onClick={this.handleToggle}>
+              Select
+            </Button>
           </Form.Group>
-          <Form.Group as={Row} className="form-row">
+          <Form.Group className="form-row design-form">
             <Form.Label column sm="2" htmlFor="style">Style</Form.Label>
-            <Col sm="6">
-              <Form.Select id="style" name="style" value={this.state.style} onChange={this.handleChange}>
-                <option value="plastic">plastic</option>
-                <option value="flat">flat</option>
-                <option value="flat-square">flat-square</option>
-                <option value="for-the-badge">for-the-badge</option>
-                <option value="social">social</option>
-              </Form.Select>
-            </Col>
+            <Form.Select id="style" name="style" value={this.state.style} onChange={this.handleChange}>
+              <option value="plastic">plastic</option>
+              <option value="flat">flat</option>
+              <option value="flat-square">flat-square</option>
+              <option value="for-the-badge">for-the-badge</option>
+              <option value="social">social</option>
+            </Form.Select>
             <Form.Label column sm="2" htmlFor="color">Color</Form.Label>
-            <Col sm="2">
-              <Form.Control id="color" name="color" type="color" value={'#' + this.state.color} onChange={this.handleColorPicke} />
-            </Col>
+            <Form.Control id="color" name="color" type="color" value={'#' + this.state.color} onChange={this.handleColorPicke} />
           </Form.Group>
         </Form>
 
