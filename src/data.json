@@ -150,6 +150,11 @@
     "category": "Other"
   },
   {
+    "name": "Bash",
+    "color": "2a3238",
+    "category": "Languages"
+  },
+  {
     "name": "Battle.net",
     "color": "15171e",
     "category": "Game"
