@@ -187,17 +187,17 @@
   {
     "name": "C",
     "color": "fff",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "C Sharp",
     "color": "239120",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "C++",
     "color": "00599c",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Canva",
@@ -222,7 +222,7 @@
   {
     "name": "Clojure",
     "color": "8cd545",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Cloudflare",
@@ -267,12 +267,12 @@
   {
     "name": "CSS3",
     "color": "2572b6",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Dart",
     "color": "0175c2",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Debian",
@@ -322,12 +322,12 @@
   {
     "name": "Elixir",
     "color": "4b275f",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Elm",
     "color": "95c9ec",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Ember.js",
@@ -442,7 +442,7 @@
   {
     "name": "Go",
     "color": "7fd5ea",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Godot Engine",
@@ -477,7 +477,7 @@
   {
     "name": "GraphQL",
     "color": "202020",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "GreenSock",
@@ -492,7 +492,7 @@
   {
     "name": "HTML5",
     "color": "ececec",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Humble Bundle",
@@ -537,12 +537,12 @@
   {
     "name": "Java",
     "color": "007396",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "JavaScript",
     "color": "000",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Jenkins",
@@ -557,7 +557,7 @@
   {
     "name": "Julia",
     "color": "f7f7f7",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Jupyter",
@@ -572,7 +572,7 @@
   {
     "name": "Kotlin",
     "color": "d7effe",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Krita",
@@ -592,12 +592,12 @@
   {
     "name": "LaTeX",
     "color": "008080",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Less",
     "color": "1d365d",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Liberapay",
@@ -622,7 +622,7 @@
   {
     "name": "Lua",
     "color": "2c2d72",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "macOS",
@@ -637,7 +637,7 @@
   {
     "name": "Markdown",
     "color": "000",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Material UI",
@@ -792,17 +792,17 @@
   {
     "name": "Perl",
     "color": "39457e",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Perl",
     "color": "39457e",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "PHP",
     "color": "f2f2f2",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "PhpStorm",
@@ -867,7 +867,7 @@
   {
     "name": "Python",
     "color": "ffde73",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Qiita",
@@ -887,12 +887,12 @@
   {
     "name": "R",
     "color": "276dc3",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Racket",
     "color": "9f1d20",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Raspberry Pi",
@@ -947,7 +947,7 @@
   {
     "name": "Ruby",
     "color": "cc342d",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Ruby on Rails",
@@ -962,7 +962,7 @@
   {
     "name": "Rust",
     "color": "000",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "RxDB",
@@ -982,12 +982,12 @@
   {
     "name": "Sass",
     "color": "f8f9fa",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Scala",
     "color": "dc322f",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Scaleway",
@@ -1067,7 +1067,7 @@
   {
     "name": "Swift",
     "color": "fafafa",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "TailwindCSS",
@@ -1127,7 +1127,7 @@
   {
     "name": "TypeScript",
     "color": "f7f7f7",
-    "category": "ProgrammingLanguages"
+    "category": "Languages"
   },
   {
     "name": "Ubisoft",
