@@ -73,6 +73,33 @@ label {
 /********************/
 /*       Modal      */
 /********************/
+.modal-header {
+  display: block;
+  position: relative;
+}
+
+.btn-close {
+  margin: 0;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.search-box {
+  text-align: center;
+
+  input {
+    border: none;
+    border-radius: 18px;
+    outline: 3px solid #737f99;
+    padding-left: 16px;
+
+    &:focus {
+      outline: 3px solid #99a9cc;
+    }
+  }
+}
+
 .list-item-body {
   display: grid;
   grid-auto-rows: minmax(50px, auto);

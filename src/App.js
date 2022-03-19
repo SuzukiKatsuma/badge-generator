@@ -1,50 +1,58 @@
-import React from 'react';
-import { Button, Form, Modal } from 'react-bootstrap';
-import './index.scss';
-import Data from './data.json';
-import Outputs from './components/Outputs';
+import React from "react";
+import { Button, Form, Modal } from "react-bootstrap";
+import "./index.scss";
+import Data from "./data.json";
+import Outputs from "./components/Outputs";
 
 export default class Generator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isShow: false,
-      status: 'React',
-      color: '20232a',
-      style: 'flat'
+      search: "",
+      status: "React",
+      color: "20232a",
+      style: "flat"
     };
 
-    this.handleChange = this.handleChange.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleColorPicke = this.handleColorPicke.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ style: event.target.value });
   }
 
   handleToggle() {
     this.setState({ isShow: !this.state.isShow });
   }
 
-  handleClick(event) {
+  handleSearch({ target }) {
+    this.setState({ search: target.value })
+  }
+
+  handleClick({ currentTarget }) {
     this.setState({
-      status: event.currentTarget.name,
-      color: event.currentTarget.getAttribute('data-color'),
-      isShow: !this.state.isShow
+      isShow: !this.state.isShow,
+      status: currentTarget.name,
+      color: currentTarget.getAttribute("data-color")
     });
   }
 
-  handleColorPicke(event) {
-    const setColor = event.currentTarget.value.slice(1);
+  handleChange({ target }) {
+    this.setState({ style: target.value });
+  }
+
+  handleColorPicke({ currentTarget }) {
+    const setColor = currentTarget.value.slice(1);
     this.setState({ color: setColor });
   }
 
   render() {
-    const lists = Data.map((d) =>
-      <button className="list-item" key={d.id} name={d.name} data-color={d.color} onClick={this.handleClick}>
-        <p className="align-center m-0">{d.name}</p>
+    const search = this.state.search.toUpperCase();
+    const lists = Data.map(({ name, color }, index) =>
+      (search === "" || name.toUpperCase().indexOf(search) !== -1) &&
+      <button className="list-item" key={index} name={name} data-color={color} onClick={this.handleClick}>
+        <p className="align-center m-0">{name}</p>
       </button>
     );
 
@@ -68,14 +76,20 @@ export default class Generator extends React.Component {
               <option value="social">social</option>
             </Form.Select>
             <Form.Label column sm="2" htmlFor="color">Color</Form.Label>
-            <Form.Control id="color" name="color" type="color" value={'#' + this.state.color} onChange={this.handleColorPicke} />
+            <Form.Control id="color" name="color" type="color" value={`#${this.state.color}`} onChange={this.handleColorPicke} />
           </Form.Group>
         </Form>
 
         <>
           <Modal show={this.state.isShow} onHide={this.handleToggle}>
             <Modal.Header closeButton>
-              <Modal.Title>Select</Modal.Title>
+              <div>
+                <h4>Select</h4>
+                <form className="search-box" role="search">
+                  <input id="search" placeholder="search" value={this.state.search} onChange={this.handleSearch}>
+                  </input>
+                </form>
+              </div>
             </Modal.Header>
             <Modal.Body className="list-item-body">
               {lists}
@@ -88,7 +102,7 @@ export default class Generator extends React.Component {
           color={this.state.color}
           style={this.state.style}
         />
-      </main >
+      </main>
     );
   }
 }
