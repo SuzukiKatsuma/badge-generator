@@ -8,10 +8,25 @@ button {
   background: #737f99;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: #ffffff;
 
   &:hover, &:focus {
     background-color: #99a9cc;
+  }
+}
+
+/********************/
+/*    Breakpoints   */
+/********************/
+@mixin small {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: 992px) {
+    @content;
   }
 }
 
@@ -22,7 +37,7 @@ header {
   background-color: #393f4c;
 
   h1 {
-    color: #fff;
+    color: #ffffff;
     padding: 16px;
     text-align: center;
   }
@@ -33,15 +48,19 @@ header {
 /********************/
 .form-wrapper {
   margin: 64px 0;
+
+  @include small {
+    margin: 48px 0;
+  }
 }
 
 .form-row {
   margin: 20px auto;
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  width: 50%;
+  user-select: none;
+  width: 50vw;
 
   label {
     margin: 0 auto;
@@ -50,24 +69,30 @@ header {
   input {
     margin: 0 auto;
   }
+
+  @include small {
+    width: 90vw;
+  }
 }
 
 .icon-form {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: 72px 3fr 1fr;
 }
 
 .design-form {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: 72px 2fr 1fr 1fr;
 }
 
 label {
   text-align: right;
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 
 /********************/
@@ -104,6 +129,10 @@ label {
   display: grid;
   grid-auto-rows: minmax(50px, auto);
   grid-template-columns: repeat(3, 1fr);
+
+  @include small {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .list-item {
@@ -114,8 +143,12 @@ label {
 /*      Outputs     */
 /********************/
 .output-area {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
+
+  @include large {
+    padding: 20px 12vw;
+  }
 }
 
 .badge {
@@ -131,10 +164,10 @@ label {
 .src-title {
   font-weight: bold;
   margin: 0 auto;
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
   width: 85%;
 
   p {
@@ -147,8 +180,8 @@ label {
   background-color: #d3cfd9;
   border-radius: 5px;
   margin: 0 auto;
-  overflow: scroll;
   -ms-overflow-style: none;
+  overflow: scroll;
   padding: 30px 10px;
   scrollbar-width: none; 
   width: 80%;
