@@ -645,11 +645,6 @@
     "category": "Languages"
   },
   {
-    "name": "Material UI",
-    "color": "0081cb",
-    "category": "Library"
-  },
-  {
     "name": "Messenger",
     "color": "fff",
     "category": "Social"
@@ -683,6 +678,11 @@
     "name": "MongoDB",
     "color": "fff",
     "category": "Database"
+  },
+  {
+    "name": "MUI",
+    "color": "fff",
+    "category": "Library"
   },
   {
     "name": "MySQL",
