@@ -5,6 +5,7 @@ import Data from "./data.json";
 import Outputs from "./components/Outputs";
 
 export default class Generator extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -14,23 +15,17 @@ export default class Generator extends React.Component {
       color: "20232a",
       style: "flat"
     };
-
-    this.handleToggle = this.handleToggle.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleColorPicke = this.handleColorPicke.bind(this);
   }
 
-  handleToggle() {
+  handleToggle = () => {
     this.setState({ isShow: !this.state.isShow });
   }
 
-  handleSearch({ target }) {
+  handleSearch = ({ target }) => {
     this.setState({ search: target.value })
   }
 
-  handleClick({ currentTarget }) {
+  handleClick = ({ currentTarget }) => {
     this.setState({
       isShow: !this.state.isShow,
       status: currentTarget.name,
@@ -38,17 +33,18 @@ export default class Generator extends React.Component {
     });
   }
 
-  handleChange({ target }) {
+  handleChange = ({ target }) => {
     this.setState({ style: target.value });
   }
 
-  handleColorPicke({ currentTarget }) {
+  handleColorPicke = ({ currentTarget }) => {
     const setColor = currentTarget.value.slice(1);
     this.setState({ color: setColor });
   }
 
   render() {
     const search = this.state.search.toUpperCase();
+
     const lists = Data.map(({ name, color }, index) =>
       (search === "" || name.toUpperCase().indexOf(search) !== -1) &&
       <button className="list-item" key={index} name={name} data-color={color} onClick={this.handleClick}>

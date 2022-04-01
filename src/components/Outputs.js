@@ -7,7 +7,7 @@ const Outputs = ({ status, color, style }) => {
   let name = status.replace(/ /g, "&nbsp;");
 
   logo = logo.replace(/ /g, "-");
-  logo = logo.replace('++', "%2b%2b");
+  logo = logo.replace(/\+/g, "%2b");
   if (logo === "bash") logo = `gnu-${logo}`;
 
   htmlSrc += `${status}-${color}.svg?logo=${logo}&style=${style}`;
