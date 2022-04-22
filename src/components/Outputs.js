@@ -1,5 +1,17 @@
 import React from "react";
 
+const copy = ({ target }) => {
+  navigator.clipboard.writeText(target.nextElementSibling.textContent);
+
+  target.textContent = "success";
+  target.classList.add("copy-success");
+
+  setTimeout(() => {
+    target.textContent = "copy";
+    target.classList.remove("copy-success");
+  }, 1000);
+}
+
 const Outputs = ({ status, color, style }) => {
   let htmlSrc = 'https://img.shields.io/badge/';
   let mdSrc = 'https://img.shields.io/badge/';
@@ -23,12 +35,15 @@ const Outputs = ({ status, color, style }) => {
         <p>HTML</p>
       </div>
       <pre className="src-space">
+        <button type="button" className="copy-button" onClick={copy}>copy</button>
         <code>&lt;img src="{htmlSrc}" /&gt;</code>
       </pre>
+
       <div className="src-title">
         <p>Markdown</p>
       </div>
       <pre className="src-space">
+        <button type="button" className="copy-button" onClick={copy}>copy</button>
         <code>![{status}]({mdSrc})</code>
       </pre>
     </div>

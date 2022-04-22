@@ -10,7 +10,8 @@ button {
   border-radius: 5px;
   color: #ffffff;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: #99a9cc;
   }
 }
@@ -182,9 +183,22 @@ label {
   margin: 0 auto;
   -ms-overflow-style: none;
   overflow: scroll;
-  padding: 30px 10px;
-  scrollbar-width: none; 
+  padding: 10px 10px 30px;
+  scrollbar-width: none;
   width: 80%;
+
+  .copy-button {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    transition: all 1s;
+    width: 80px;
+  }
+
+  .copy-success {
+    background-color: #73998d;
+    transition: all 1s;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -198,7 +212,7 @@ label {
 /********************/
 /*      Footer      */
 /********************/
-footer{
+footer {
   margin-top: 16px;
 
   p {
