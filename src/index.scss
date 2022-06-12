@@ -189,10 +189,18 @@ label {
 
   .copy-button {
     display: block;
-    margin-right: 0;
-    margin-left: auto;
+    position: absolute;
+    right: 13%;
     transition: all 1s;
     width: 80px;
+
+    @include small() {
+      right: 15%;
+    }
+
+    @include large() {
+      right: 20%;
+    }
   }
 
   .copy-success {
@@ -205,7 +213,9 @@ label {
   }
 
   code {
+    display: block;
     font: 12px source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+    padding-top: 25px;
   }
 }
 
