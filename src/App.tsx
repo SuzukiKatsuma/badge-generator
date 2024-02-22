@@ -5,29 +5,21 @@ import Data from "./data.json";
 import Outputs from "./components/Outputs";
 
 function App(){
-  const [isShow, setIsShow] = useState(false);
+  const [isModalOpened, setIsModalOpened] = useState(false);
   const [searchText, setSearchText] = useState("");
 
   const [badgeTitle, setBadgeTitle] = useState("React");
   const [color, setColor] = useState("20232a");
   const [style, setStyle] = useState("flat");
 
-  const handleToggle = () => {
-    setIsShow(!isShow);
+  const handleModalToggle = () => {
+    setIsModalOpened(!isModalOpened);
   }
 
-  const handleSearch = ({ target }) => {
-    setSearchText(target.value);
-  }
-
-  const handleClick = ({ currentTarget }) => {
-    setIsShow(!isShow);
+  const selectData = ({ currentTarget }) => {
+    setIsModalOpened(!isModalOpened);
     setBadgeTitle(currentTarget.name);
     setColor(currentTarget.getAttribute("data-color"));
-  }
-
-  const handleChange = ({ target }) => {
-    setStyle(target.value);
   }
 
   const handleColorPicke = ({ currentTarget }) => {
@@ -38,7 +30,7 @@ function App(){
   const search = searchText.toUpperCase();
   const lists = Data.map(({ name, color }, index) =>
     (search === "" || name.toUpperCase().indexOf(search) !== -1) &&
-    <button className="list-item" key={index} name={name} data-color={color} onClick={handleClick}>
+    <button className="list-item" key={index} name={name} data-color={color} onClick={selectData}>
       <p className="align-center m-0">{name}</p>
     </button>
   );
@@ -49,13 +41,13 @@ function App(){
         <Form.Group className="form-row icon-form">
           <Form.Label column sm="2">Icon</Form.Label>
           <Form.Control readOnly id="logo" name="logo" placeholder={badgeTitle} />
-          <Button key="modal" variant="outline-secondary" onClick={handleToggle}>
+          <Button key="modal" variant="outline-secondary" onClick={handleModalToggle}>
             Select
           </Button>
         </Form.Group>
         <Form.Group className="form-row design-form">
           <Form.Label column sm="2" htmlFor="style">Style</Form.Label>
-          <Form.Select id="style" name="style" value={style} onChange={handleChange}>
+          <Form.Select id="style" name="style" value={style} onChange={({ target }) => setStyle(target.value)}>
             <option value="plastic">plastic</option>
             <option value="flat">flat</option>
             <option value="flat-square">flat-square</option>
@@ -68,12 +60,12 @@ function App(){
       </Form>
 
       <>
-        <Modal show={isShow} onHide={handleToggle}>
+        <Modal show={isModalOpened} onHide={handleModalToggle}>
           <Modal.Header closeButton>
             <div>
               <h4>Select</h4>
               <form className="search-box" role="search">
-                <input id="search" placeholder="search" value={searchText} onChange={handleSearch}>
+                <input id="search" placeholder="search" value={searchText} onChange={({ target }) => setSearchText(target.value)}>
                 </input>
               </form>
             </div>
