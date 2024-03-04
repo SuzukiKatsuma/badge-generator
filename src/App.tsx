@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import "./index.scss";
 import Data from "./data.json";
 import Outputs from "./components/Outputs";
 
-function App(){
+const App = () => {
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [searchText, setSearchText] = useState("");
 
@@ -84,6 +86,5 @@ function App(){
     </main>
   );
 }
-
 
 export default App;
