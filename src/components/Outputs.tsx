@@ -1,4 +1,5 @@
 import OutputBox from '~/components/OutputBox';
+import { makeBadgeStringForHTML, makeBadgeStringForMarkdown } from '~/lib/makeBadgeString';
 
 interface Props {
   readonly badgeTitle: string;
@@ -7,31 +8,23 @@ interface Props {
 };
 
 const Outputs = ({ badgeTitle, color, style }: Props) => {
-  const BASE_URL = 'https://img.shields.io/badge/';
-  let logo = badgeTitle.toString().toLowerCase();
-  const name = badgeTitle.replace(/ /g, '&nbsp;');
-
-  logo = logo.replace(/ /g, '-');
-  logo = logo.replace(/\+/g, '%2b');
-  if (logo === 'bash') logo = `gnu-${logo}`;
-
-  const htmlSrcUrl = `${BASE_URL}${badgeTitle}-${color}.svg?logo=${logo}&style=${style}`;
-  const mdSrcUrl = `${BASE_URL}${name}-${color}.svg?logo=${logo}&style=${style}`;
+  const htmlBadgeString = makeBadgeStringForHTML(badgeTitle, color, style);
+  const markdownBadgeString = makeBadgeStringForMarkdown(badgeTitle, color, style);
 
   return (
     <div className='output-area'>
       <figure className='badge'>
-        <img src={htmlSrcUrl} alt={badgeTitle} />
+        <div dangerouslySetInnerHTML={{ __html: htmlBadgeString }} />
       </figure>
 
       <OutputBox
         targetLabel='Markdown'
-        badgeString={`![${badgeTitle}](${mdSrcUrl})`}
+        badgeString={markdownBadgeString}
       />
 
       <OutputBox
         targetLabel='HTML'
-        badgeString={`<img src="${htmlSrcUrl}" />`}
+        badgeString={htmlBadgeString}
       />
     </div>
   );
