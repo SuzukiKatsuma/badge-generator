@@ -11,26 +11,26 @@ const badgeTitleToLogoString = (badgeTitle: string) => {
   return logo;
 };
 
-const makeBadgeStringForMarkdown = (badgeTitle: string, color: string, style: string) => {
-  const name = badgeTitle
+const makeBadgeStringForMarkdown = (badgeData: BadgeData) => {
+  const name = badgeData.name
     .replace(/ /g, '&nbsp;')
     .replace(/\+/g, '%2b');
 
-  const logo = badgeTitleToLogoString(badgeTitle);
+  const logo = badgeTitleToLogoString(badgeData.name);
 
-  const url = `${BASE_URL}/${name}-${color}.svg?logo=${logo}&style=${style}`;
+  const url = `${BASE_URL}/${name}-${badgeData.color}.svg?logo=${logo}&style=${badgeData.style}`;
 
   return `![${name}](${url})`;
 };
 
-const makeUrlForHTML = (badgeTitle: string, color: string, style: string) => {
-  const logo = badgeTitleToLogoString(badgeTitle);
-  return `${BASE_URL}/${badgeTitle}-${color}.svg?logo=${logo}&style=${style}`;
+const makeUrlForHTML = (badgeData: BadgeData) => {
+  const logo = badgeTitleToLogoString(badgeData.name);
+  return `${BASE_URL}/${badgeData.name}-${badgeData.color}.svg?logo=${logo}&style=${badgeData.style}`;
 };
 
-const makeBadgeStringForHTML = (badgeTitle: string, color: string, style: string) => {
-  const url = makeUrlForHTML(badgeTitle, color, style);
-  return `<img src="${url}" alt="${badgeTitle}" />`;
+const makeBadgeStringForHTML = (badgeData: BadgeData) => {
+  const url = makeUrlForHTML(badgeData);
+  return `<img src="${url}" alt="${badgeData.name}" />`;
 };
 
 export { makeBadgeStringForMarkdown, makeUrlForHTML, makeBadgeStringForHTML };

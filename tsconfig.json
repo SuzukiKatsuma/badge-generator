@@ -22,7 +22,8 @@
     /* Path alias */
     "baseUrl": "./src",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "*": ["./src/types/*"]
     }
   },
   "include": ["src/**/*"],

@@ -6,30 +6,16 @@ import OutputArea from '~/components/OutputArea';
 import './index.scss';
 
 const App = () => {
-  const [badgeTitle, setBadgeTitle] = useState<string>('React');
-  const [color, setColor] = useState<string>('20232a');
-  const [style, setStyle] = useState<string>('flat');
-
-  const setBadgeData = (selectBadgeTitle: string, selectColor: string, style: string) => {
-    setBadgeTitle(selectBadgeTitle);
-    setColor(selectColor);
-    setStyle(style);
-  };
+  const [badgeData, setBadgeData] = useState<BadgeData>({ name: 'React', color: '20232a', style: 'flat' });
 
   return (
     <main>
       <DataForm
-        badgeTitle={badgeTitle}
-        color={color}
-        style={style}
-        setBadgeData={setBadgeData}
+        badgeData={badgeData}
+        setBadgeData={(badgeData) => setBadgeData(badgeData)}
       />
 
-      <OutputArea
-        badgeTitle={badgeTitle}
-        color={color}
-        style={style}
-      />
+      <OutputArea badgeData={badgeData} />
     </main>
   );
 };

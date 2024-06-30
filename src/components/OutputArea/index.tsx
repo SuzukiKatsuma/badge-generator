@@ -2,19 +2,17 @@ import OutputBox from '~/components/OutputBox';
 import { makeBadgeStringForMarkdown, makeUrlForHTML, makeBadgeStringForHTML } from '~/lib/makeBadgeString';
 
 interface Props {
-  readonly badgeTitle: string;
-  readonly color: string;
-  readonly style: string;
+  readonly badgeData: BadgeData;
 };
 
-const OutputArea = ({ badgeTitle, color, style }: Props) => {
-  const htmlBadgeString = makeBadgeStringForHTML(badgeTitle, color, style);
-  const markdownBadgeString = makeBadgeStringForMarkdown(badgeTitle, color, style);
+const OutputArea = ({ badgeData }: Props) => {
+  const htmlBadgeString = makeBadgeStringForHTML(badgeData);
+  const markdownBadgeString = makeBadgeStringForMarkdown(badgeData);
 
   return (
     <div className='output-area'>
       <figure className='badge'>
-        <img src={makeUrlForHTML(badgeTitle, color, style)} alt={badgeTitle} />
+        <img src={makeUrlForHTML(badgeData)} alt={badgeData.name} />
       </figure>
 
       <OutputBox
