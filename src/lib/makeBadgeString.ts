@@ -23,12 +23,14 @@ const makeBadgeStringForMarkdown = (badgeTitle: string, color: string, style: st
   return `![${name}](${url})`;
 };
 
-const makeBadgeStringForHTML = (badgeTitle: string, color: string, style: string) => {
+const makeUrlForHTML = (badgeTitle: string, color: string, style: string) => {
   const logo = badgeTitleToLogoString(badgeTitle);
+  return `${BASE_URL}/${badgeTitle}-${color}.svg?logo=${logo}&style=${style}`;
+};
 
-  const url = `${BASE_URL}/${badgeTitle}-${color}.svg?logo=${logo}&style=${style}`;
-
+const makeBadgeStringForHTML = (badgeTitle: string, color: string, style: string) => {
+  const url = makeUrlForHTML(badgeTitle, color, style);
   return `<img src="${url}" alt="${badgeTitle}" />`;
 };
 
-export { makeBadgeStringForMarkdown, makeBadgeStringForHTML };
+export { makeBadgeStringForMarkdown, makeUrlForHTML, makeBadgeStringForHTML };

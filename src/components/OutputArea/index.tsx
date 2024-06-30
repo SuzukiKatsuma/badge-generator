@@ -1,5 +1,5 @@
 import OutputBox from '~/components/OutputBox';
-import { makeBadgeStringForHTML, makeBadgeStringForMarkdown } from '~/lib/makeBadgeString';
+import { makeBadgeStringForMarkdown, makeUrlForHTML, makeBadgeStringForHTML } from '~/lib/makeBadgeString';
 
 interface Props {
   readonly badgeTitle: string;
@@ -14,7 +14,7 @@ const OutputArea = ({ badgeTitle, color, style }: Props) => {
   return (
     <div className='output-area'>
       <figure className='badge'>
-        <div dangerouslySetInnerHTML={{ __html: htmlBadgeString }} />
+        <img src={makeUrlForHTML(badgeTitle, color, style)} alt={badgeTitle} />
       </figure>
 
       <OutputBox
