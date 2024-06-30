@@ -45,58 +45,6 @@ header {
 }
 
 /********************/
-/*      Choice      */
-/********************/
-.form-wrapper {
-  margin: 64px 0;
-
-  @include small {
-    margin: 48px 0;
-  }
-}
-
-.form-row {
-  margin: 20px auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 50vw;
-
-  label {
-    margin: 0 auto;
-  }
-
-  input {
-    margin: 0 auto;
-  }
-
-  @include small {
-    width: 90vw;
-  }
-}
-
-.icon-form {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 72px 3fr 1fr;
-}
-
-.design-form {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 72px 2fr 1fr 1fr;
-}
-
-label {
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/********************/
 /*       Modal      */
 /********************/
 

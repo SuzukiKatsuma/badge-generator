@@ -5,11 +5,11 @@ import Data from '~/data.json';
 
 interface Props {
   readonly hasModalOpened: boolean;
-  readonly setBadgeData: (badgeTitle: string, color: string) => void;
+  readonly selectBadgeData: (badgeTitle: string, color: string) => void;
   readonly onClose: () => void;
 };
 
-const DataSelectModal = ({ hasModalOpened, setBadgeData, onClose }: Props) => {
+const DataSelectModal = ({ hasModalOpened, selectBadgeData, onClose }: Props) => {
   const modalRef = useRef<HTMLDialogElement>(null);
   const [searchString, setSearchString] = useState<string>('');
 
@@ -21,7 +21,7 @@ const DataSelectModal = ({ hasModalOpened, setBadgeData, onClose }: Props) => {
     const badgeTitle = currentTarget.name;
     const color = currentTarget.getAttribute('data-color') as string;
 
-    setBadgeData(badgeTitle, color);
+    selectBadgeData(badgeTitle, color);
 
     setSearchString('');
   };
