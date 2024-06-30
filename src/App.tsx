@@ -1,30 +1,29 @@
-'use client';
-
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 import './index.scss';
 import Data from './data.json';
 import Outputs from './components/Outputs';
 
 const App = () => {
-  const [isModalOpened, setIsModalOpened] = useState(false);
-  const [searchText, setSearchText] = useState('');
+  const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
+  const [searchText, setSearchText] = useState<string>('');
 
-  const [badgeTitle, setBadgeTitle] = useState('React');
-  const [color, setColor] = useState('20232a');
-  const [style, setStyle] = useState('flat');
+  const [badgeTitle, setBadgeTitle] = useState<string>('React');
+  const [color, setColor] = useState<string>('20232a');
+  const [style, setStyle] = useState<string>('flat');
 
   const handleModalToggle = () => {
     setIsModalOpened(!isModalOpened);
   };
 
-  const selectData = ({ currentTarget }) => {
+  const selectData = ({ currentTarget }: React.MouseEvent<HTMLButtonElement>) => {
     setIsModalOpened(!isModalOpened);
     setBadgeTitle(currentTarget.name);
-    setColor(currentTarget.getAttribute('data-color'));
+    const colorData = currentTarget.getAttribute('data-color');
+    colorData && (setColor(colorData));
   };
 
-  const handleColorPicke = ({ currentTarget }) => {
+  const handleColorPicke = ({ currentTarget }: React.ChangeEvent<HTMLInputElement>) => {
     const setColorValue = currentTarget.value.slice(1);
     setColor(setColorValue);
   };

@@ -1,7 +1,6 @@
-import React from 'react';
 
-const copy = ({ target }) => {
-  navigator.clipboard.writeText(target.nextElementSibling.textContent);
+const copy = ( target: HTMLElement ) => {
+  navigator.clipboard.writeText(target.nextElementSibling?.textContent || '');
 
   target.textContent = 'success';
   target.classList.add('copy-success');
@@ -19,8 +18,7 @@ type Props = {
 };
 
 const Outputs = ({ badgeTitle, color, style }: Props) => {
-  let htmlSrc = 'https://img.shields.io/badge/';
-  let mdSrc = 'https://img.shields.io/badge/';
+  const BASE_URL = 'https://img.shields.io/badge/';
   let logo = badgeTitle.toString().toLowerCase();
   const name = badgeTitle.replace(/ /g, '&nbsp;');
 
@@ -28,21 +26,21 @@ const Outputs = ({ badgeTitle, color, style }: Props) => {
   logo = logo.replace(/\+/g, '%2b');
   if (logo === 'bash') logo = `gnu-${logo}`;
 
-  htmlSrc += `${badgeTitle}-${color}.svg?logo=${logo}&style=${style}`;
-  mdSrc += `${name}-${color}.svg?logo=${logo}&style=${style}`;
+  const htmlSrcUrl = `${BASE_URL}${badgeTitle}-${color}.svg?logo=${logo}&style=${style}`;
+  const mdSrcUrl = `${BASE_URL}${name}-${color}.svg?logo=${logo}&style=${style}`;
 
   return (
     <div className='output-area'>
       <figure className='badge'>
-        <img src={htmlSrc} alt={badgeTitle} />
+        <img src={htmlSrcUrl} alt={badgeTitle} />
       </figure>
 
       <div className='src-title'>
         <p>HTML</p>
       </div>
       <pre className='src-space'>
-        <button type='button' className='copy-button' onClick={copy}>copy</button>
-        <code>&lt;img src=&quot;{htmlSrc}&quot; /&gt;</code>
+        <button type='button' className='copy-button' onClick={({target}) =>copy(target as HTMLElement)}>copy</button>
+        <code>&lt;img src=&quot;{htmlSrcUrl}&quot; /&gt;</code>
       </pre>
 
       <div className='src-title'>
@@ -50,8 +48,8 @@ const Outputs = ({ badgeTitle, color, style }: Props) => {
       </div>
 
       <pre className='src-space'>
-        <button type='button' className='copy-button' onClick={copy}>copy</button>
-        <code>![{badgeTitle}]({mdSrc})</code>
+        <button type='button' className='copy-button' onClick={({target}) =>copy(target as HTMLElement)}>copy</button>
+        <code>![{badgeTitle}]({mdSrcUrl})</code>
       </pre>
     </div>
   );
