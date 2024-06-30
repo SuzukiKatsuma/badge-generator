@@ -1,20 +1,9 @@
+import OutputBox from '~/components/OutputBox';
 
-const copy = ( target: HTMLElement ) => {
-  navigator.clipboard.writeText(target.nextElementSibling?.textContent || '');
-
-  target.textContent = 'success';
-  target.classList.add('copy-success');
-
-  setTimeout(() => {
-    target.textContent = 'copy';
-    target.classList.remove('copy-success');
-  }, 1000);
-};
-
-type Props = {
-  badgeTitle: string;
-  color: string;
-  style: string;
+interface Props {
+  readonly badgeTitle: string;
+  readonly color: string;
+  readonly style: string;
 };
 
 const Outputs = ({ badgeTitle, color, style }: Props) => {
@@ -35,22 +24,15 @@ const Outputs = ({ badgeTitle, color, style }: Props) => {
         <img src={htmlSrcUrl} alt={badgeTitle} />
       </figure>
 
-      <div className='src-title'>
-        <p>HTML</p>
-      </div>
-      <pre className='src-space'>
-        <button type='button' className='copy-button' onClick={({target}) =>copy(target as HTMLElement)}>copy</button>
-        <code>&lt;img src=&quot;{htmlSrcUrl}&quot; /&gt;</code>
-      </pre>
+      <OutputBox
+        targetLabel='Markdown'
+        badgeString={`![${badgeTitle}](${mdSrcUrl})`}
+      />
 
-      <div className='src-title'>
-        <p>Markdown</p>
-      </div>
-
-      <pre className='src-space'>
-        <button type='button' className='copy-button' onClick={({target}) =>copy(target as HTMLElement)}>copy</button>
-        <code>![{badgeTitle}]({mdSrcUrl})</code>
-      </pre>
+      <OutputBox
+        targetLabel='HTML'
+        badgeString={`<img src="${htmlSrcUrl}" />`}
+      />
     </div>
   );
 };
