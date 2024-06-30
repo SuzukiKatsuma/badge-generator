@@ -1,26 +1,24 @@
 import  { useState } from 'react';
-import { Button, Form, Modal } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
+
+import Outputs from '~/components/Outputs';
+import DataSelectModal  from '~/components/DataSelectModal';
+
 import './index.scss';
-import Data from './data.json';
-import Outputs from './components/Outputs';
 
 const App = () => {
-  const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
-  const [searchText, setSearchText] = useState<string>('');
+  const [hasModalOpened, setHasModalOpened] = useState<boolean>(false);
 
   const [badgeTitle, setBadgeTitle] = useState<string>('React');
   const [color, setColor] = useState<string>('20232a');
   const [style, setStyle] = useState<string>('flat');
 
-  const handleModalToggle = () => {
-    setIsModalOpened(!isModalOpened);
-  };
 
-  const selectData = ({ currentTarget }: React.MouseEvent<HTMLButtonElement>) => {
-    setIsModalOpened(!isModalOpened);
-    setBadgeTitle(currentTarget.name);
-    const colorData = currentTarget.getAttribute('data-color');
-    colorData && (setColor(colorData));
+  const setBadgeData = (selectBadgeTitle: string, selectColor: string) => {
+    setBadgeTitle(selectBadgeTitle);
+    setColor(selectColor);
+
+    setHasModalOpened(false);
   };
 
   const handleColorPicke = ({ currentTarget }: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,21 +26,13 @@ const App = () => {
     setColor(setColorValue);
   };
 
-  const search = searchText.toUpperCase();
-  const lists = Data.map(({ name, color }, index) =>
-    (search === '' || name.toUpperCase().indexOf(search) !== -1) &&
-      <button className="list-item" key={index} name={name} data-color={color} onClick={selectData}>
-        <p className="align-center m-0">{name}</p>
-      </button>
-  );
-
   return (
     <main>
       <Form className="form-wrapper">
         <Form.Group className="form-row icon-form">
           <Form.Label column sm="2">Icon</Form.Label>
           <Form.Control readOnly id="logo" name="logo" placeholder={badgeTitle} />
-          <Button key="modal" variant="outline-secondary" onClick={handleModalToggle}>
+          <Button key="modal" variant="outline-secondary" onClick={() => setHasModalOpened(true)}>
             Select
           </Button>
         </Form.Group>
@@ -60,22 +50,11 @@ const App = () => {
         </Form.Group>
       </Form>
 
-      <>
-        <Modal show={isModalOpened} onHide={handleModalToggle}>
-          <Modal.Header closeButton>
-            <div>
-              <h4>Select</h4>
-              <form className="search-box" role="search">
-                <input id="search" placeholder="search" value={searchText} onChange={({ target }) => setSearchText(target.value)}>
-                </input>
-              </form>
-            </div>
-          </Modal.Header>
-          <Modal.Body className="list-item-body">
-            {lists}
-          </Modal.Body>
-        </Modal>
-      </>
+      <DataSelectModal
+        hasModalOpened={hasModalOpened}
+        setBadgeData={setBadgeData}
+        onClose={() => setHasModalOpened(false)}
+      />
 
       <Outputs
         badgeTitle={badgeTitle}
