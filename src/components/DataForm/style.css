@@ -1,0 +1,35 @@
+.badge-form {
+  display: grid;
+  gap: 8px;
+  grid-template-rows: 1fr 48px 48px 48px;
+  margin: 64px auto;
+  width: 500px;
+  max-width: 100%;
+}
+
+fieldset {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 90px 1fr;
+  height: 100%;
+
+  h2 {
+    margin: 0;
+  }
+
+  label {
+    align-self: center;
+    font-size: 16px;
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  input, select {
+    align-self: center;
+    width: 200px;
+    height: 90%;
+  }
+}

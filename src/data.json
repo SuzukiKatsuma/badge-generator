@@ -71,7 +71,7 @@
   },
   {
     "name": "Android",
-    "color": "fff",
+    "color": "ffffff",
     "category": "OS"
   },
   {
@@ -96,7 +96,7 @@
   },
   {
     "name": "Apache Cassandra",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Database"
   },
   {
@@ -121,7 +121,7 @@
   },
   {
     "name": "Apple Pay",
-    "color": "000",
+    "color": "000000",
     "category": "Funding"
   },
   {
@@ -131,7 +131,7 @@
   },
   {
     "name": "Arduino",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Other"
   },
   {
@@ -146,7 +146,7 @@
   },
   {
     "name": "Babel",
-    "color": "000",
+    "color": "000000",
     "category": "Other"
   },
   {
@@ -166,7 +166,7 @@
   },
   {
     "name": "Bitcoin",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Funding"
   },
   {
@@ -181,7 +181,7 @@
   },
   {
     "name": "Brave",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Browser"
   },
   {
@@ -191,7 +191,7 @@
   },
   {
     "name": "C",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Languages"
   },
   {
@@ -206,7 +206,7 @@
   },
   {
     "name": "Canva",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Design"
   },
   {
@@ -216,12 +216,12 @@
   },
   {
     "name": "Chart.js",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Library"
   },
   {
     "name": "CLion",
-    "color": "000",
+    "color": "000000",
     "category": "Editor"
   },
   {
@@ -231,7 +231,7 @@
   },
   {
     "name": "Cloudflare",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Hosting"
   },
   {
@@ -241,12 +241,12 @@
   },
   {
     "name": "Cocos",
-    "color": "000",
+    "color": "000000",
     "category": "Game"
   },
   {
     "name": "Codeberg",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Hosting"
   },
   {
@@ -256,12 +256,12 @@
   },
   {
     "name": "CodePen",
-    "color": "000",
+    "color": "000000",
     "category": "Editor"
   },
   {
     "name": "CodeSandbox",
-    "color": "000",
+    "color": "000000",
     "category": "Editor"
   },
   {
@@ -286,12 +286,12 @@
   },
   {
     "name": "DigitalOcean",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Hosting"
   },
   {
     "name": "Discord",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
@@ -301,7 +301,7 @@
   },
   {
     "name": "Docker",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Other"
   },
   {
@@ -311,7 +311,7 @@
   },
   {
     "name": "EA",
-    "color": "000",
+    "color": "000000",
     "category": "Game"
   },
   {
@@ -336,7 +336,7 @@
   },
   {
     "name": "Ember.js",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Framework"
   },
   {
@@ -351,7 +351,7 @@
   },
   {
     "name": "Express",
-    "color": "000",
+    "color": "000000",
     "category": "Framework"
   },
   {
@@ -361,7 +361,7 @@
   },
   {
     "name": "FastAPI",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Framework"
   },
   {
@@ -371,12 +371,12 @@
   },
   {
     "name": "Figma",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Design"
   },
   {
     "name": "Firebase",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Hosting"
   },
   {
@@ -386,7 +386,7 @@
   },
   {
     "name": "Flask",
-    "color": "000",
+    "color": "000000",
     "category": "Framework"
   },
   {
@@ -426,12 +426,12 @@
   },
   {
     "name": "GitHub Sponsors",
-    "color": "000",
+    "color": "000000",
     "category": "Funding"
   },
   {
     "name": "GitLab",
-    "color": "fff",
+    "color": "ffffff",
     "category": "VersionControl"
   },
   {
@@ -456,12 +456,12 @@
   },
   {
     "name": "Google Chrome",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Browser"
   },
   {
     "name": "Google Cloud",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Hosting"
   },
   {
@@ -476,7 +476,7 @@
   },
   {
     "name": "Google Pay",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Funding"
   },
   {
@@ -486,7 +486,7 @@
   },
   {
     "name": "GreenSock",
-    "color": "000",
+    "color": "000000",
     "category": "Library"
   },
   {
@@ -506,7 +506,7 @@
   },
   {
     "name": "Inkscape",
-    "color": "000",
+    "color": "000000",
     "category": "Design"
   },
   {
@@ -516,22 +516,22 @@
   },
   {
     "name": "Intellij IDEA",
-    "color": "000",
+    "color": "000000",
     "category": "Editor"
   },
   {
     "name": "InVision",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Design"
   },
   {
     "name": "iOS",
-    "color": "000",
+    "color": "000000",
     "category": "OS"
   },
   {
     "name": "Itch.io",
-    "color": "000",
+    "color": "000000",
     "category": "Game"
   },
   {
@@ -546,7 +546,7 @@
   },
   {
     "name": "JavaScript",
-    "color": "000",
+    "color": "000000",
     "category": "Languages"
   },
   {
@@ -566,7 +566,7 @@
   },
   {
     "name": "Jupyter",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Editor"
   },
   {
@@ -586,12 +586,12 @@
   },
   {
     "name": "Kubernetes",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Other"
   },
   {
     "name": "Laravel",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Framework"
   },
   {
@@ -611,12 +611,12 @@
   },
   {
     "name": "Linux",
-    "color": "000",
+    "color": "000000",
     "category": "OS"
   },
   {
     "name": "LINE",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
@@ -631,7 +631,7 @@
   },
   {
     "name": "macOS",
-    "color": "000",
+    "color": "000000",
     "category": "OS"
   },
   {
@@ -641,12 +641,12 @@
   },
   {
     "name": "Markdown",
-    "color": "000",
+    "color": "000000",
     "category": "Languages"
   },
   {
     "name": "Messenger",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
@@ -676,12 +676,12 @@
   },
   {
     "name": "MongoDB",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Database"
   },
   {
     "name": "MUI",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Library"
   },
   {
@@ -706,7 +706,7 @@
   },
   {
     "name": "Next.js",
-    "color": "000",
+    "color": "000000",
     "category": "Framework"
   },
   {
@@ -716,7 +716,7 @@
   },
   {
     "name": "Nintendo",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Game"
   },
   {
@@ -726,7 +726,7 @@
   },
   {
     "name": "Nintendo GameCube",
-    "color": "000",
+    "color": "000000",
     "category": "Game"
   },
   {
@@ -741,7 +741,7 @@
   },
   {
     "name": "Notion",
-    "color": "000",
+    "color": "000000",
     "category": "Other"
   },
   {
@@ -756,7 +756,7 @@
   },
   {
     "name": "NVIDIA",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Game"
   },
   {
@@ -786,12 +786,12 @@
   },
   {
     "name": "Patreon",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Funding"
   },
   {
     "name": "PayPal",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Funding"
   },
   {
@@ -811,7 +811,7 @@
   },
   {
     "name": "PhpStorm",
-    "color": "000",
+    "color": "000000",
     "category": "Editor"
   },
   {
@@ -856,17 +856,17 @@
   },
   {
     "name": "PostgreSQL",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Database"
   },
   {
     "name": "ProtonMail",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
     "name": "PyCharm",
-    "color": "000",
+    "color": "000000",
     "category": "Editor"
   },
   {
@@ -881,7 +881,7 @@
   },
   {
     "name": "Qt",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Framework"
   },
   {
@@ -926,7 +926,7 @@
   },
   {
     "name": "Reddit",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
@@ -941,7 +941,7 @@
   },
   {
     "name": "Rider",
-    "color": "000",
+    "color": "000000",
     "category": "Editor"
   },
   {
@@ -966,7 +966,7 @@
   },
   {
     "name": "Rust",
-    "color": "000",
+    "color": "000000",
     "category": "Languages"
   },
   {
@@ -976,7 +976,7 @@
   },
   {
     "name": "Safari",
-    "color": "000",
+    "color": "000000",
     "category": "Browser"
   },
   {
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "Signal",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
@@ -1011,7 +1011,7 @@
   },
   {
     "name": "Skype",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
@@ -1021,12 +1021,12 @@
   },
   {
     "name": "Snapchat",
-    "color": "000",
+    "color": "000000",
     "category": "Social"
   },
   {
     "name": "Spring",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Framework"
   },
   {
@@ -1041,12 +1041,12 @@
   },
   {
     "name": "Steam",
-    "color": "000",
+    "color": "000000",
     "category": "Game"
   },
   {
     "name": "Storybook",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Design"
   },
   {
@@ -1066,7 +1066,7 @@
   },
   {
     "name": "Svelte",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Framework"
   },
   {
@@ -1081,17 +1081,17 @@
   },
   {
     "name": "Telegram",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
     "name": "Three.js",
-    "color": "000",
+    "color": "000000",
     "category": "Library"
   },
   {
     "name": "TikTok",
-    "color": "000",
+    "color": "000000",
     "category": "Social"
   },
   {
@@ -1121,12 +1121,12 @@
   },
   {
     "name": "Twitch",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
     "name": "Twitter",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
@@ -1136,17 +1136,17 @@
   },
   {
     "name": "Ubisoft",
-    "color": "000",
+    "color": "000000",
     "category": "Game"
   },
   {
     "name": "Ubuntu",
-    "color": "fff",
+    "color": "ffffff",
     "category": "OS"
   },
   {
     "name": "Unity",
-    "color": "000",
+    "color": "000000",
     "category": "Game"
   },
   {
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "Vercel",
-    "color": "000",
+    "color": "000000",
     "category": "Hosting"
   },
   {
@@ -1186,7 +1186,7 @@
   },
   {
     "name": "Vivaldi",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Browser"
   },
   {
@@ -1206,12 +1206,12 @@
   },
   {
     "name": "WeChat",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
     "name": "WebStorm",
-    "color": "000",
+    "color": "000000",
     "category": "Editor"
   },
   {
@@ -1221,12 +1221,12 @@
   },
   {
     "name": "Wii",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Game"
   },
   {
     "name": "Wii U",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Game"
   },
   {
@@ -1246,7 +1246,7 @@
   },
   {
     "name": "Xcode",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Editor"
   },
   {
@@ -1266,12 +1266,12 @@
   },
   {
     "name": "Zenn",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   },
   {
     "name": "Zoom",
-    "color": "fff",
+    "color": "ffffff",
     "category": "Social"
   }
 ]
