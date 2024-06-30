@@ -7,7 +7,7 @@ interface Props {
   readonly style: string;
 };
 
-const Outputs = ({ badgeTitle, color, style }: Props) => {
+const OutputArea = ({ badgeTitle, color, style }: Props) => {
   const htmlBadgeString = makeBadgeStringForHTML(badgeTitle, color, style);
   const markdownBadgeString = makeBadgeStringForMarkdown(badgeTitle, color, style);
 
@@ -30,4 +30,4 @@ const Outputs = ({ badgeTitle, color, style }: Props) => {
   );
 };
 
-export default Outputs;
+export default OutputArea;

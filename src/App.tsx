@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 
 import DataForm from './components/DataForm';
-import Outputs from '~/components/Outputs';
+import OutputArea from '~/components/OutputArea';
 
 import './index.scss';
 
@@ -25,7 +25,7 @@ const App = () => {
         setBadgeData={setBadgeData}
       />
 
-      <Outputs
+      <OutputArea
         badgeTitle={badgeTitle}
         color={color}
         style={style}
