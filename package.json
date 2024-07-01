@@ -49,6 +49,7 @@
     "gh-pages": "^6.1.1",
     "sass": "^1.77.6",
     "typescript": "5.5.2",
-    "vite": "^5.3.2"
+    "vite": "^5.3.2",
+    "vite-plugin-inspect": "^0.8.4"
   }
 }
