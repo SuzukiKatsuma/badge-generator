@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   root: 'src',
   publicDir: 'public',
+  base: './',
   resolve: {
     alias: {
       '@/': path.join(__dirname, 'src/'),
