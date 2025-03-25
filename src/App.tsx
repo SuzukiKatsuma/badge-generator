@@ -1,22 +1,30 @@
-import  { useState } from 'react';
+import DataForm from "@/components/DataForm";
+import Header from "@/components/Header";
+import OutputArea from "@/components/OutputArea";
+import { useState } from "react";
 
-import DataForm from '@/components/DataForm';
-import OutputArea from '@/components/OutputArea';
-
-import './index.scss';
+import "./index.scss";
 
 const App = () => {
-  const [badgeData, setBadgeData] = useState<BadgeData>({ name: 'React', color: '20232a', style: 'flat' });
+  const [badgeData, setBadgeData] = useState<BadgeData>({
+    name: "React",
+    color: "20232a",
+    style: "flat",
+  });
 
   return (
-    <main>
-      <DataForm
-        badgeData={badgeData}
-        setBadgeData={(badgeData) => setBadgeData(badgeData)}
-      />
+    <>
+      <Header />
 
-      <OutputArea badgeData={badgeData} />
-    </main>
+      <main>
+        <DataForm
+          badgeData={badgeData}
+          setBadgeData={(badgeData) => setBadgeData(badgeData)}
+        />
+
+        <OutputArea badgeData={badgeData} />
+      </main>
+    </>
   );
 };
 
