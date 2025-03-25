@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import DataSelectModal  from '@/components/DataSelectModal';
+import DataSelectModal from "@/components/DataSelectModal";
+import { useState } from "react";
 
-import './style.css';
+import style from "./style.module.css";
 
 interface Props {
   readonly badgeData: BadgeData;
   readonly setBadgeData: (badgeData: BadgeData) => void;
-};
+}
 
 const DataForm = ({ badgeData, setBadgeData }: Props) => {
   const [hasModalOpened, setHasModalOpened] = useState(false);
@@ -14,33 +14,42 @@ const DataForm = ({ badgeData, setBadgeData }: Props) => {
 
   const selectBadgeData = (selectBadgeTitle: string, selectColor: string) => {
     setIconName(selectBadgeTitle);
-    setBadgeData({ ...badgeData, name: selectBadgeTitle, color: selectColor});
+    setBadgeData({ ...badgeData, name: selectBadgeTitle, color: selectColor });
 
     setHasModalOpened(false);
   };
 
-  const onStyleChange = ({ currentTarget }: React.ChangeEvent<HTMLSelectElement>) => {
+  const onStyleChange = ({
+    currentTarget,
+  }: React.ChangeEvent<HTMLSelectElement>) => {
     const style = currentTarget.value;
-    setBadgeData({...badgeData, style: style });
+    setBadgeData({ ...badgeData, style: style });
   };
 
-  const onColorChange = ({ currentTarget }: React.ChangeEvent<HTMLInputElement>) => {
+  const onColorChange = ({
+    currentTarget,
+  }: React.ChangeEvent<HTMLInputElement>) => {
     const setColorValue = currentTarget.value.slice(1);
     const color = setColorValue;
     setBadgeData({ ...badgeData, color: color });
   };
 
   return (
-    <>
-      <form className="badge-form">
-        <fieldset>
-          <label>Icon:</label>
-          <h2>{iconName}</h2>
+    <div className={style.badgeFormWrapper}>
+      <form className={style.badgeForm}>
+        <fieldset className={style.badgeFormRow}>
+          <label htmlFor="icon">Icon:</label>
+          <input id="icon" name="icon" type="text" value={iconName} readOnly />
         </fieldset>
 
-        <fieldset>
+        <fieldset className={style.badgeFormRow}>
           <label htmlFor="style">Style:</label>
-          <select id="style" name="style" value={badgeData.style} onChange={onStyleChange}>
+          <select
+            id="style"
+            name="style"
+            value={badgeData.style}
+            onChange={onStyleChange}
+          >
             <option value="plastic">plastic</option>
             <option value="flat">flat</option>
             <option value="flat-square">flat-square</option>
@@ -49,23 +58,28 @@ const DataForm = ({ badgeData, setBadgeData }: Props) => {
           </select>
         </fieldset>
 
-        <fieldset>
+        <fieldset className={style.badgeFormRow}>
           <label htmlFor="color">Color:</label>
-          <input id="color" name="color" type="color" value={`#${badgeData.color}`} onChange={onColorChange} />
+          <input
+            id="color"
+            name="color"
+            type="color"
+            value={`#${badgeData.color}`}
+            onChange={onColorChange}
+          />
         </fieldset>
 
-        <button type='button'  onClick={() => setHasModalOpened(true)}>
+        <button type="button" onClick={() => setHasModalOpened(true)}>
           Icon Select
         </button>
       </form>
-
 
       <DataSelectModal
         hasModalOpened={hasModalOpened}
         selectBadgeData={selectBadgeData}
         onClose={() => setHasModalOpened(false)}
       />
-    </>
+    </div>
   );
 };
 

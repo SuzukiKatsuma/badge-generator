@@ -1,0 +1,46 @@
+.badge-form-wrapper {
+  padding: 32px;
+}
+
+.badge-form {
+  display: grid;
+  grid-template-rows: repeat(4, 48px);
+  gap: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.badge-form-row {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 50px 1fr;
+  font-size: 16px;
+  border: none;
+  height: 48px;
+
+  label {
+    align-self: center;
+    text-align: right;
+    user-select: none;
+  }
+
+  input:not([type="color"]),
+  select {
+    align-self: center;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  input[type="color"] {
+    align-self: center;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+
+  input[readonly] {
+    cursor: default;
+  }
+}
