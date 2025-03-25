@@ -50,21 +50,6 @@ header {
 }
 
 /********************/
-/*       Modal      */
-/********************/
-
-.list-item-body {
-  display: grid;
-  grid-auto-rows: minmax(50px, auto);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-
-  @include small {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/********************/
 /*      Footer      */
 /********************/
 footer {
