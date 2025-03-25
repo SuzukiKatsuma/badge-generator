@@ -1,10 +1,11 @@
 .output-area {
+  display: grid;
+  place-content: center;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 32px;
 }
 
 .badge {
   display: grid;
   place-content: center;
-  height: 50px;
 }

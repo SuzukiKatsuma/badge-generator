@@ -65,66 +65,6 @@ header {
 }
 
 /********************/
-/*      Outputs     */
-/********************/
-.src-title {
-  font-weight: bold;
-  margin: 0 auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 85%;
-
-  p {
-    margin: 0;
-    margin-top: 16px;
-  }
-}
-
-.src-space {
-  background-color: #d3cfd9;
-  border-radius: 5px;
-  margin: 0 auto;
-  -ms-overflow-style: none;
-  overflow: scroll;
-  padding: 10px 10px 30px;
-  scrollbar-width: none;
-  width: 80%;
-
-  .copy-button {
-    display: block;
-    position: absolute;
-    right: 13%;
-    transition: all 1s;
-    width: 80px;
-
-    @include small() {
-      right: 15%;
-    }
-
-    @include large() {
-      right: 20%;
-    }
-  }
-
-  .copy-success {
-    background-color: #73998d;
-    transition: all 1s;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  code {
-    display: block;
-    font: 12px source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
-    padding-top: 25px;
-  }
-}
-
-/********************/
 /*      Footer      */
 /********************/
 footer {
