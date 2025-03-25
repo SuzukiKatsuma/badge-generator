@@ -19,16 +19,3 @@
 body {
   background-color: var(--background-color);
 }
-
-button {
-  background: var(--primary-color);
-  border: none;
-  border-radius: 5px;
-  color: var(--white);
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: var(--primary-color-variant);
-  }
-}

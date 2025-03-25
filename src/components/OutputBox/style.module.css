@@ -37,13 +37,23 @@
 
 .copy-button {
   position: absolute;
-  right: 10px;
-  transition: all 1s;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  right: 8px;
+  transition: 0.3s ease-in;
   width: 80px;
   height: 20px;
 }
 
+.copy-button:hover {
+  background-color: var(--primary-color-variant);
+  transform: scale(1.01);
+}
+
 .copy-success {
   background-color: #73998d;
-  transition: all 1s;
+  transition: 0.3s ease-in;
 }
