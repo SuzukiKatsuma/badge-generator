@@ -19,7 +19,9 @@
   display: block;
   margin-left: auto;
   background: none;
-  color: #000000;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -49,4 +51,20 @@
   grid-auto-rows: minmax(50px, auto);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
+
+  button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in;
+    width: 100%;
+
+    &:hover {
+      background-color: var(--primary-color-variant);
+      transform: scale(1.01);
+    }
+  }
 }

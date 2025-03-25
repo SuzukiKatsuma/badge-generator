@@ -11,6 +11,7 @@
 }
 
 .badge-form-row {
+  color: var(--text-color);
   display: grid;
   gap: 16px;
   grid-template-columns: 50px 1fr;
@@ -27,6 +28,7 @@
   input:not([type="color"]),
   select {
     align-self: center;
+    color: var(--text-color);
     cursor: pointer;
     font-size: 16px;
     padding: 8px;
@@ -43,4 +45,19 @@
   input[readonly] {
     cursor: default;
   }
+}
+
+.icon-select-button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease-in;
+}
+
+.icon-select-button:hover {
+  background-color: var(--primary-color-variant);
+  transform: scale(1.01);
 }

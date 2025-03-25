@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import {onCLS, onINP, onFCP, onLCP, onTTFB} from 'web-vitals';
+import App from "@/App";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { onCLS, onFCP, onINP, onLCP, onTTFB } from "web-vitals";
 
-import './index.scss';
+import "./index.css";
 
 const rootElement = document.getElementById("root");
 

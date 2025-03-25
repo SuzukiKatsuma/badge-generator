@@ -69,7 +69,11 @@ const DataForm = ({ badgeData, setBadgeData }: Props) => {
           />
         </fieldset>
 
-        <button type="button" onClick={() => setHasModalOpened(true)}>
+        <button
+          type="button"
+          className={style.iconSelectButton}
+          onClick={() => setHasModalOpened(true)}
+        >
           Icon Select
         </button>
       </form>

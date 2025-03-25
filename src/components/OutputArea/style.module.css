@@ -1,7 +1,7 @@
 .output-area {
   display: grid;
   place-content: center;
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 32px;
 }
 
