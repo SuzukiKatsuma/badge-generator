@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-import DataSelectModal  from '~/components/DataSelectModal';
+import DataSelectModal  from '@/components/DataSelectModal';
 
 import './style.css';
 

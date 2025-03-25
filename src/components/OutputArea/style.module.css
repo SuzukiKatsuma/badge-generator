@@ -1,0 +1,10 @@
+.output-area {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.badge {
+  display: grid;
+  place-content: center;
+  height: 50px;
+}

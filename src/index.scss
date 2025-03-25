@@ -1,4 +1,8 @@
-@use "bootstrap/scss/bootstrap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: #f3f3f2;
@@ -9,6 +13,7 @@ button {
   border: none;
   border-radius: 5px;
   color: #ffffff;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -62,25 +67,6 @@ header {
 /********************/
 /*      Outputs     */
 /********************/
-.output-area {
-  background-color: #ffffff;
-  padding: 20px;
-
-  @include large {
-    padding: 20px 12vw;
-  }
-}
-
-.badge {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-
-  img {
-    height: 50px;
-  }
-}
-
 .src-title {
   font-weight: bold;
   margin: 0 auto;

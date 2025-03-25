@@ -12,6 +12,7 @@ fieldset {
   gap: 16px;
   grid-template-columns: 90px 1fr;
   height: 100%;
+  border: none;
 
   h2 {
     margin: 0;

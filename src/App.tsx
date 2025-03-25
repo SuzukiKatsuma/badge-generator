@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 
-import DataForm from './components/DataForm';
-import OutputArea from '~/components/OutputArea';
+import DataForm from '@/components/DataForm';
+import OutputArea from '@/components/OutputArea';
 
 import './index.scss';
 
