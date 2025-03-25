@@ -5,6 +5,7 @@
 }
 
 .src-title {
+  color: var(--text-color);
   font-weight: bold;
   margin: 0 auto;
   user-select: none;
@@ -14,6 +15,7 @@
 }
 
 .src-space {
+  color: var(--text-color);
   background-color: #d3cfd9;
   border-radius: 8px;
   -ms-overflow-style: none;

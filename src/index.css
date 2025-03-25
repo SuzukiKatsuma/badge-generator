@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #f3f3f2;
+
+  --text-color: #393f4c;
+  --link-color: #1e50a2;
+
+  --primary-color: #737f99;
+  --primary-color-variant: #4d5566;
+
+  --white: #fff;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color-variant);
+  }
+}

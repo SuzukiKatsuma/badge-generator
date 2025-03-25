@@ -19,7 +19,7 @@
   display: block;
   margin-left: auto;
   background: none;
-  color: #000000;
+  color: var(--text-color);
 
   &:hover,
   &:focus {

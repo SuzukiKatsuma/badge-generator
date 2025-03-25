@@ -3,7 +3,7 @@
   padding-bottom: 8px;
 
   h1 {
-    color: #393f4c;
+    color: var(--text-color);
     text-align: center;
   }
 }

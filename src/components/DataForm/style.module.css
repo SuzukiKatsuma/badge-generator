@@ -11,6 +11,7 @@
 }
 
 .badge-form-row {
+  color: var(--text-color);
   display: grid;
   gap: 16px;
   grid-template-columns: 50px 1fr;
@@ -27,6 +28,7 @@
   input:not([type="color"]),
   select {
     align-self: center;
+    color: var(--text-color);
     cursor: pointer;
     font-size: 16px;
     padding: 8px;
