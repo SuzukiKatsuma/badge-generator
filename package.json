@@ -4,12 +4,12 @@
   "homepage": "https://SuzukiKatsuma.github.io/badge-generator",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^6.4.6",
-    "@testing-library/react": "^16.0.0",
-    "@testing-library/user-event": "^14.2.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "web-vitals": "^4.2.0"
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "web-vitals": "^4.2.4"
   },
   "scripts": {
     "dev": "vite",
@@ -34,20 +34,20 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2.3.0",
-    "@types/node": "^20.14.9",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/parser": "^7.14.1",
-    "@vitejs/plugin-react": "^4.3.1",
     "bootstrap": "5.3.3",
-    "eslint": "^9.6.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-promise": "^6.2.0",
-    "eslint-plugin-react": "^7.34.3",
-    "gh-pages": "^6.1.1",
-    "sass": "^1.77.6",
-    "typescript": "5.5.2",
-    "vite": "^5.3.2"
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@types/node": "^22.13.13",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/parser": "^8.28.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.23.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-react": "^7.37.4",
+    "gh-pages": "^6.3.0",
+    "sass": "^1.86.0",
+    "typescript": "5.8.2",
+    "vite": "^6.2.3"
   }
 }
