@@ -4,6 +4,7 @@ import OutputArea from "@/components/OutputArea";
 import { useState } from "react";
 
 import "./index.scss";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [badgeData, setBadgeData] = useState<BadgeData>({
@@ -24,6 +25,8 @@ const App = () => {
 
         <OutputArea badgeData={badgeData} />
       </main>
+
+      <Footer />
     </>
   );
 };
