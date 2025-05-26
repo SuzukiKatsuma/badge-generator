@@ -4,21 +4,22 @@ import {
   makeBadgeStringForMarkdown,
   makeUrlForHTML,
 } from "@/lib/makeBadgeString";
+import type { BadgeParameter } from "@/types/BadgeParameter";
 
 import style from "./style.module.css";
 
 interface Props {
-  readonly badgeData: BadgeData;
+  readonly badgeParameter: BadgeParameter;
 }
 
-const OutputArea = ({ badgeData }: Props) => {
-  const htmlBadgeString = makeBadgeStringForHTML(badgeData);
-  const markdownBadgeString = makeBadgeStringForMarkdown(badgeData);
+const OutputArea = ({ badgeParameter }: Props) => {
+  const htmlBadgeString = makeBadgeStringForHTML(badgeParameter);
+  const markdownBadgeString = makeBadgeStringForMarkdown(badgeParameter);
 
   return (
     <div className={style.outputArea}>
       <figure className={style.badge}>
-        <img src={makeUrlForHTML(badgeData)} alt={badgeData.name} />
+        <img src={makeUrlForHTML(badgeParameter)} alt={badgeParameter.name} />
       </figure>
 
       <OutputBox targetLabel="Markdown" badgeString={markdownBadgeString} />

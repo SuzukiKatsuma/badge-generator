@@ -1,3 +1,4 @@
+import type { BadgeParameter } from "@/types/BadgeParameter"
 const BASE_URL = 'https://img.shields.io/badge';
 
 const badgeTitleToLogoString = (badgeTitle: string) => {
@@ -11,26 +12,26 @@ const badgeTitleToLogoString = (badgeTitle: string) => {
   return logo;
 };
 
-const makeBadgeStringForMarkdown = (badgeData: BadgeData) => {
-  const name = badgeData.name
+const makeBadgeStringForMarkdown = (badgeParameter: BadgeParameter) => {
+  const name = badgeParameter.name
     .replace(/ /g, '&nbsp;')
     .replace(/\+/g, '%2b');
 
-  const logo = badgeTitleToLogoString(badgeData.name);
+  const logo = badgeTitleToLogoString(badgeParameter.name);
 
-  const url = `${BASE_URL}/${name}-${badgeData.color}.svg?logo=${logo}&style=${badgeData.style}`;
+  const url = `${BASE_URL}/${name}-${badgeParameter.color}.svg?logo=${logo}&style=${badgeParameter.style}`;
 
   return `![${name}](${url})`;
 };
 
-const makeUrlForHTML = (badgeData: BadgeData) => {
-  const logo = badgeTitleToLogoString(badgeData.name);
-  return `${BASE_URL}/${badgeData.name}-${badgeData.color}.svg?logo=${logo}&style=${badgeData.style}`;
+const makeUrlForHTML = (badgeParameter: BadgeParameter) => {
+  const logo = badgeTitleToLogoString(badgeParameter.name);
+  return `${BASE_URL}/${badgeParameter.name}-${badgeParameter.color}.svg?logo=${logo}&style=${badgeParameter.style}`;
 };
 
-const makeBadgeStringForHTML = (badgeData: BadgeData) => {
-  const url = makeUrlForHTML(badgeData);
-  return `<img src="${url}" alt="${badgeData.name}" />`;
+const makeBadgeStringForHTML = (badgeParameter: BadgeParameter) => {
+  const url = makeUrlForHTML(badgeParameter);
+  return `<img src="${url}" alt="${badgeParameter.name}" />`;
 };
 
 export { makeBadgeStringForMarkdown, makeUrlForHTML, makeBadgeStringForHTML };

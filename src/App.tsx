@@ -2,10 +2,11 @@ import DataForm from "@/components/DataForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import OutputArea from "@/components/OutputArea";
+import type { BadgeParameter } from "@/types/BadgeParameter";
 import { useState } from "react";
 
 const App = () => {
-  const [badgeData, setBadgeData] = useState<BadgeData>({
+  const [badgeParameter, setBadgeParameter] = useState<BadgeParameter>({
     name: "React",
     color: "20232a",
     style: "flat",
@@ -17,11 +18,11 @@ const App = () => {
 
       <main>
         <DataForm
-          badgeData={badgeData}
-          setBadgeData={(badgeData) => setBadgeData(badgeData)}
+          badgeParameter={badgeParameter}
+          setBadgeParameter={(badgeParameter) => setBadgeParameter(badgeParameter)}
         />
 
-        <OutputArea badgeData={badgeData} />
+        <OutputArea badgeParameter={badgeParameter} />
       </main>
 
       <Footer />

@@ -1,20 +1,21 @@
-import DataSelectModal from "@/components/DataSelectModal";
 import { useState } from "react";
+import DataSelectModal from "@/components/DataSelectModal";
+import type { BadgeParameter } from "@/types/BadgeParameter";
 
 import style from "./style.module.css";
 
 interface Props {
-  readonly badgeData: BadgeData;
-  readonly setBadgeData: (badgeData: BadgeData) => void;
+  readonly badgeParameter: BadgeParameter;
+  readonly setBadgeParameter: (badgeParameter: BadgeParameter) => void;
 }
 
-const DataForm = ({ badgeData, setBadgeData }: Props) => {
+const DataForm = ({ badgeParameter, setBadgeParameter }: Props) => {
   const [hasModalOpened, setHasModalOpened] = useState(false);
-  const [iconName, setIconName] = useState<string>(badgeData.name);
+  const [iconName, setIconName] = useState<string>(badgeParameter.name);
 
   const selectBadgeData = (selectBadgeTitle: string, selectColor: string) => {
     setIconName(selectBadgeTitle);
-    setBadgeData({ ...badgeData, name: selectBadgeTitle, color: selectColor });
+    setBadgeParameter({ ...badgeParameter, name: selectBadgeTitle, color: selectColor });
 
     setHasModalOpened(false);
   };
@@ -23,7 +24,7 @@ const DataForm = ({ badgeData, setBadgeData }: Props) => {
     currentTarget,
   }: React.ChangeEvent<HTMLSelectElement>) => {
     const style = currentTarget.value;
-    setBadgeData({ ...badgeData, style: style });
+    setBadgeParameter({ ...badgeParameter, style: style });
   };
 
   const onColorChange = ({
@@ -31,7 +32,7 @@ const DataForm = ({ badgeData, setBadgeData }: Props) => {
   }: React.ChangeEvent<HTMLInputElement>) => {
     const setColorValue = currentTarget.value.slice(1);
     const color = setColorValue;
-    setBadgeData({ ...badgeData, color: color });
+    setBadgeParameter({ ...badgeParameter, color: color });
   };
 
   return (
@@ -47,7 +48,7 @@ const DataForm = ({ badgeData, setBadgeData }: Props) => {
           <select
             id="style"
             name="style"
-            value={badgeData.style}
+            value={badgeParameter.style}
             onChange={onStyleChange}
           >
             <option value="plastic">plastic</option>
@@ -64,7 +65,7 @@ const DataForm = ({ badgeData, setBadgeData }: Props) => {
             id="color"
             name="color"
             type="color"
-            value={`#${badgeData.color}`}
+            value={`#${badgeParameter.color}`}
             onChange={onColorChange}
           />
         </fieldset>
