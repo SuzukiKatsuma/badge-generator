@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useMemo, useCallback } from "react";
-import type { BadgeParameter } from "@/types/BadgeParameter";
+import { useSearch } from "@/hooks/useSearch";
+import type { BadgeData } from "@/types/BadgeData";
 
 import data from "@/data.json";
 import style from "./style.module.css";
@@ -9,22 +10,6 @@ interface Props {
   readonly selectBadgeData: (badgeTitle: string, color: string) => void;
   readonly onClose: () => void;
 }
-
-interface BadgeData {
-  readonly name: string;
-  readonly color: string;
-}
-
-const useSearchFilter = (data: BadgeData[], searchText: string) => {
-  return useMemo(() => {
-    if (!searchText.trim()) {
-      return data;
-    }
-    return data.filter((item) =>
-      item.name.toLowerCase().includes(searchText.toLowerCase().trim()),
-    );
-  }, [data, searchText]);
-};
 
 const DataSelectModal = ({
   hasModalOpened,
@@ -65,7 +50,7 @@ const DataSelectModal = ({
     [selectBadgeData],
   );
 
-  const filteredData = useSearchFilter(data as BadgeData[], searchText);
+  const filteredData = useSearch(data as BadgeData[], searchText);
 
   const renderItems = () => {
     if (filteredData.length === 0) {
