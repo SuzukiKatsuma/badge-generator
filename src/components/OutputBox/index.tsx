@@ -7,6 +7,8 @@ interface Props {
   readonly badgeString: string;
 }
 
+const COPY_SUCCESS_DURATION = 1000;
+
 const OutputBox = ({ targetLabel, badgeString }: Props) => {
   const [buttonText, setButtonText] = useState<string>("copy");
 
@@ -17,7 +19,7 @@ const OutputBox = ({ targetLabel, badgeString }: Props) => {
 
     setTimeout(() => {
       setButtonText("copy");
-    }, 1000);
+    }, COPY_SUCCESS_DURATION);
   };
 
   return (
