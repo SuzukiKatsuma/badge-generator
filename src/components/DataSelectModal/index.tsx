@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useMemo, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { useSearch } from "@/hooks/useSearch";
 import type { BadgeData } from "@/types/BadgeData";
 
